@@ -1,6 +1,6 @@
 {
   "name": "@antondavidenko/modular-character-threejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "modular character threejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,7 @@
   },
   "author": "Anron Davidenko",
   "license": "MIT",
+  "files": ["*"],
   "devDependencies": {
     "@types/three": "0.126.0",
     "@types/jquery": "^3.5.5",

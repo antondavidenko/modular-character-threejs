@@ -13,7 +13,7 @@ const mainId = "RigPelvis";
 
 export class Character {
 
-    private characterGroup: THREE.Group;
+    public characterGroup: THREE.Group;
     private head: THREE.Object3D;
 
     private characterSlots: CharacterSlots;
