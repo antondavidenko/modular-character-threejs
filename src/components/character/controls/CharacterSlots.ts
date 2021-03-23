@@ -1,11 +1,8 @@
-import { CharacterConfig } from "../model/CharacterConfig";
-// import { loadFBX } from "@src/components/utils/loadFBX";
+import { CharacterConfig } from '../model/CharacterConfig';
 import { loadFBX } from '../../utils/loadFBX';
-// import { setTextureByImage } from "@src/components/utils/setTextureByImage";
-import { setTextureByImage } from "../../utils/setTextureByImage";
-import { colorStringToNumber } from "../utils/colors";
-// import { CDN_ROOT } from "@src/components/storage/utils/loadFilesList";
-import { CDN_ROOT } from "../../storage/utils/loadFilesList";
+import { setTextureByImage } from '../../utils/setTextureByImage';
+import { colorStringToNumber } from '../utils/colors';
+import { CDN_ROOT } from '../../storage/utils/loadFilesList';
 
 const headSlot = "Dummy_Prop_Head";
 const leftHandSlot = "Dummy_Prop_Left";

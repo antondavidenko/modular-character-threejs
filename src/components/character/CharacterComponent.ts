@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-// import { loadFBX } from '@src/components/utils/loadFBX';
 import { loadFBX } from '../utils/loadFBX';
 import { CharacterConfig } from './model/CharacterConfig';
 import { CharacterSlots } from './controls/CharacterSlots';
@@ -13,7 +12,7 @@ const mainId = "RigPelvis";
 
 export class Character {
 
-    public characterGroup: THREE.Group;
+    private characterGroup: THREE.Group;
     private head: THREE.Object3D;
 
     private characterSlots: CharacterSlots;
@@ -104,6 +103,14 @@ export class Character {
     resetAnimation(animationFileId:string) {
         this.animationFileId = animationFileId;
         this.characterAnimation.resetAnimation(animationFileId);
+    }
+
+    get position(): THREE.Vector3 {
+        return this.characterGroup.position;
+    }
+
+    set position(value: THREE.Vector3) {
+        this.characterGroup.position.set(value.x, value.y, value.z);
     }
 
 }

@@ -1,4 +1,4 @@
-import { BodyType } from "./BodyType";
+import { BodyType } from './BodyType';
 
 export type CharacterConfig = {
     baseFBX: string,

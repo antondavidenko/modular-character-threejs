@@ -1,8 +1,6 @@
 import * as THREE from 'three';
-// import { loadFBX } from '@src/components/utils/loadFBX';
 import { loadFBX } from '../../utils/loadFBX';
-// import { CDN_ROOT } from '@src/components/storage/utils/loadFilesList';
-import { CDN_ROOT } from '../../../components/storage/utils/loadFilesList';
+import { CDN_ROOT } from '../../storage/utils/loadFilesList';
 
 const ANIMATIONS_FOLDER = 'animations/';
 

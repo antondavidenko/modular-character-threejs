@@ -1,4 +1,4 @@
-import * as $ from "jquery";
+import * as $ from 'jquery';
 
 const CONFIG = "cdn_config.json";
 export let CDN_ROOT = '';

@@ -1,5 +1,5 @@
-import { CharacterConfig } from "@src/components/character/model/CharacterConfig";
-import { characterAssetsStorage as storage, BodyTypeId, ASSET_LIST, COLORS_LIST } from "../CharacterAssetsStorage";
+import { CharacterConfig } from '../../character/model/CharacterConfig';
+import { characterAssetsStorage as storage, BodyTypeId, ASSET_LIST, COLORS_LIST } from '../CharacterAssetsStorage';
 
 export function getDefaultCharacterConfig(): CharacterConfig {
     return {

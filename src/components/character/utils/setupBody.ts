@@ -1,8 +1,5 @@
-// import { setTextureByImagesList } from '@src/components/utils/setTextureByImage';
 import { setTextureByImagesList } from '../../utils/setTextureByImage';
 import { CharacterConfig } from '../model/CharacterConfig';
-// import { setScaleByVector3 } from '@src/components/utils/helpers';
-// import { CDN_ROOT } from '@src/components/storage/utils/loadFilesList';
 import { setScaleByVector3 } from '../../utils/helpers';
 import { CDN_ROOT } from '../../storage/utils/loadFilesList';
 

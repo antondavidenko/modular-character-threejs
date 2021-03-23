@@ -1,4 +1,4 @@
-import { CharacterConfig } from '@src/components/character/model/CharacterConfig';
+import { CharacterConfig } from '../../character/model/CharacterConfig';
 import { characterAssetsStorage as storage, BodyTypeId, ASSET_LIST, COLORS_LIST, SlotType } from '../CharacterAssetsStorage';
 
 const BodyTypes = [BodyTypeId.HUMAN, BodyTypeId.OGR, BodyTypeId.HOBBIT];
