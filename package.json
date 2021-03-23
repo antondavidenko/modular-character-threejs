@@ -1,6 +1,6 @@
 {
   "name": "@antondavidenko/modular-character-threejs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "modular character threejs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

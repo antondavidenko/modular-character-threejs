@@ -51,12 +51,7 @@ export class Character {
     update() {
         if (this.characterAnimation.update()) {
             this.setupBodyType();
-            this.characterGroup.rotation.x = 0;
         }
-    }
-
-    setupRotation(rotation:number) {
-        this.characterGroup.rotation.y = rotation;
     }
 
    resetBodyType(bodyType: BodyType) {
@@ -111,6 +106,14 @@ export class Character {
 
     set position(value: THREE.Vector3) {
         this.characterGroup.position.set(value.x, value.y, value.z);
+    }
+
+    get rotation(): THREE.Euler {
+        return this.characterGroup.rotation;
+    }
+
+    set rotation(value: THREE.Euler) {
+        this.characterGroup.rotation.set(value.x, value.y, value.z);
     }
 
 }
