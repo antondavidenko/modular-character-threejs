@@ -13,18 +13,19 @@ const mainId = "RigPelvis";
 export class Character {
 
     private characterGroup: THREE.Group;
+    private isReady = false;
     private head: THREE.Object3D;
 
     private characterSlots: CharacterSlots;
     private characterAnimation: CharacterAnimation = new CharacterAnimation();
 
-    constructor(private scene: THREE.Scene, private config: CharacterConfig, private animationFileId: string) {
+    constructor(private scene: THREE.Scene, private config: CharacterConfig, private animationFileId: string, callback: () => void) {
         this.characterSlots = new CharacterSlots(this.config);
-        this.init();
+        this.init(callback);
     }
 
-    private async init() {
-        await this.setupAll();
+    private async init(callback?: () => void) {
+        await this.setupAll(callback);
         this.scene.add(this.characterGroup);
     }
 
@@ -33,7 +34,7 @@ export class Character {
         this.init();
     }
 
-    private async setupAll() {
+    private async setupAll(callback?: () => void) {
         this.characterGroup = await loadFBX("models/"+this.config.baseFBX+".FBX", CDN_ROOT);
         this.head = this.characterGroup.getObjectByName(headId);
         this.characterSlots.setCharacterGroup(this.characterGroup);
@@ -46,6 +47,14 @@ export class Character {
         this.setupCarryItemSlot("backSlot", this.config.backSlot);
 
         this.characterAnimation.init(this.characterGroup, this.animationFileId);
+        if (callback) {
+            callback();
+            this.isReady = true;
+        }
+    }
+
+    getIsReady(): boolean {
+        return this.isReady;
     }
 
     update() {

@@ -85,9 +85,10 @@ class CharacterAssetsStorage {
         return this.getBodiesCollection().get(bodyTypeId);
     }
 
-    initStorage(cdnRoot: string): void {
+    initStorage(cdnRoot: string, callback: () => void): void {
         loadList(cdnRoot, (data: any) => {
             this.cdnConfig = data;
+            callback();
         });
     }
 

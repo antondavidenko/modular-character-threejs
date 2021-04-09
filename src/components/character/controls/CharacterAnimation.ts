@@ -25,9 +25,7 @@ export class CharacterAnimation {
         const lastAction = this.animationAction;
         await this.setAnimation(fileId);
         lastAction.fadeOut(0.5)
-        this.animationAction.reset();
-        this.animationAction.fadeIn(0.5)
-        this.animationAction.play();
+        this.animationAction.reset().fadeIn(0.5).play();
     }
 
     update (): boolean {
